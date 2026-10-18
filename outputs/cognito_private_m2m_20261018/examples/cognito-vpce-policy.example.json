@@ -1,0 +1,12 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "OnlyM2MTokenForApprovedPool",
+      "Effect": "Allow",
+      "Principal": "*",
+      "Action": "cognito-idp:GetClientToken",
+      "Resource": "arn:aws:cognito-idp:ap-northeast-1:123456789012:userpool/ap-northeast-1_REPLACE"
+    }
+  ]
+}

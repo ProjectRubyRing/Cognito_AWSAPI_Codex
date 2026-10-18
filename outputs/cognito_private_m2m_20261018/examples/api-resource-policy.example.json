@@ -1,0 +1,22 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Principal": "*",
+      "Action": "execute-api:Invoke",
+      "Resource": "execute-api:/test/GET/health"
+    },
+    {
+      "Effect": "Deny",
+      "Principal": "*",
+      "Action": "execute-api:Invoke",
+      "Resource": "execute-api:/test/GET/health",
+      "Condition": {
+        "StringNotEquals": {
+          "aws:SourceVpce": "vpce-REPLACE_EXECUTE_API"
+        }
+      }
+    }
+  ]
+}
